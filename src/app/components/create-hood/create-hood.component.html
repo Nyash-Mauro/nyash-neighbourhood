@@ -1,0 +1,39 @@
+
+    <div class="container">
+        <h3 class="text-center" style="padding-top: 6%;">Add a neighbourhood</h3>
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input #name type="text" class="form-control" id="name" />
+          </div>
+          <div class="form-group">
+            <label for="occupants">Occupants</label>
+            <input #occupants type="text" class="form-control" id="occupants" />
+          </div>
+          <div class="form-group">
+            <label for="occupants">Admin</label>
+            <input #admin type="text" class="form-control" id="admin" />
+          </div>
+          <div class="form-group">
+              <label for="location">Location</label>
+              <input #location type="text" class="form-control" id="location" />
+            </div>
+            <div class="form-group">
+              <label for="Contact">Contact</label>
+              <input #contact type="text" class="form-control" id="contact" />
+            </div>
+            <div class="form-group">
+              <label for="Description">Description</label>
+              <input #definition type="text" class="form-control" id="definition" />
+            </div>
+  
+         
+          <button style="width: 100%; margin-top: 3%; margin-bottom: 5%;"
+            type="button"
+            (click)="addNeighbourhood(name.value,occupants.value,admin.value,location.value,contact.value,definition.value)"
+            class="btn btn-primary">
+            Create neighbourhood
+          </button>
+        </form>
+      </div>
+      
