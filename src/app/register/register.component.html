@@ -3,24 +3,24 @@
         <h3 class="text-center" style="padding-top: 3%;">Sign Up</h3>
         <form>
             <div class="form-group">
-                <label for="first"><b>User Name</b></label>
-                <input type="text" class="form-control"  id="user_name" #user_name>
+                <label for="first"><b></b></label>
+                <input type="text" class="form-control"  id="user_name" #user_name placeholder="Username">
             </div>
             <div class="form-group">
-                <label for="Last"><b>email</b></label>
-                <input type="text" class="form-control" id="last_name" #last_name>
+                <label for="email"><b></b></label>
+                <input type="text" class="form-control" id="email" #email placeholder="email">
             </div>
             <div class="form-group">
-                <label for="password">Confirm Password</label>
-                <input type="password" class="form-control" id="password" #password2>
+                <label for="password"></label>
+                <input type="password" class="form-control" id="password" #password placeholder="password">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" #password>
+                <label for="password"></label>
+                <input type="password" class="form-control" id="password" #confirm_password placeholder="confirm password">
             </div>
             <button style="width: 100%; margin-top: 5%; margin-bottom: 5%;"
             type="button"
-            (click)="signup(user_name.value,last_name.value,password.value)"
+            (click)="signup(user_name.value,email.value,password.value,confirm_password.value)"
             class="btn btn-primary"><a href="/neighbourhood"></a>
             Signup
           </button>
@@ -29,4 +29,5 @@
         </form>
     </div>
     
+
     

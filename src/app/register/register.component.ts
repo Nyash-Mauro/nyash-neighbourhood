@@ -23,12 +23,12 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  signup(email: string, username: string, password: string) {
-    console.log('username,password,email ', username,password,email);
+  signup( user_name: string,email: string, password: string,confirm_password:string) {
+    console.log('username,password,email,confirm_password ', user_name,email,password,confirm_password);
 
-    this.authService.signup(username,password,password,email).subscribe(
+    this.authService.signup(user_name,email,password,confirm_password).subscribe(
       (success) => {
-        this.router.navigate(['/neighbourhood']);
+        this.router.navigate(['/login']);
       },
       (error) => (this.error = error)
     );

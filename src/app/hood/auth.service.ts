@@ -9,7 +9,7 @@ import { tap, catchError, shareReplay } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiRoot = 'https://hoodbe.herokuapp.com/api/v1/signup/';
+  private apiRoot = 'https://hoodbe.herokuapp.com/api/token/';
 
   constructor(private http: HttpClient) {}
 
@@ -25,8 +25,9 @@ export class AuthService {
       return of(result as T);
     };
   }
-  signup(first_name: string,last_name: string, username: string, password: string) {
-    return this.http.post(this.apiRoot, { first_name,last_name,username,password }).pipe(
+  signup(user_name: string,  email: string,password:string,confirm_password:string) {
+    console.log({user_name:user_name,email:email,password:password})
+    return this.http.post(this.apiRoot, { user_name:user_name,email:email,password:password,confirm_password:confirm_password }).pipe(
       tap((response) => {
         console.log('Neighbourhood response ', response);
       }),

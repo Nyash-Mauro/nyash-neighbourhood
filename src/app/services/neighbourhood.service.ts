@@ -8,7 +8,7 @@ import {Neighbourhood} from 'src/app/models/neighbourhood';
   providedIn: 'root'
 })
 export class NeighbourhoodService {
-  private apiRoot = 'https://rayneighborhood.herokuapp.com/api/neighborhood/';
+  private apiRoot = '';
 
   constructor(private http: HttpClient) {}
 

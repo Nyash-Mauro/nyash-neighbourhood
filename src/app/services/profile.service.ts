@@ -9,7 +9,7 @@ import { Admin } from '../models/admin';
   providedIn: 'root'
 })
 export class ProfileService {
-  private apiRoot = 'https://rayneighborhood.herokuapp.com/api/v1/profile/';
+  private apiRoot = '';
 
   constructor(private http: HttpClient) {}
 

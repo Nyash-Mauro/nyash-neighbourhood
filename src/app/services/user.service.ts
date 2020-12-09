@@ -11,7 +11,7 @@ import { User } from '../models/user';
 })
 export class UserService {
 
-  private apiRoot = 'https://rayneighborhood.herokuapp.com/api/occupantlist/';
+  private apiRoot = '';
 
   constructor(private http: HttpClient) {}
 

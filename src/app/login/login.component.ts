@@ -19,10 +19,10 @@ export class LoginComponent implements OnInit {
 
     }
   
-    login(username: string, password: string) {
-      console.log('username, password ', username, password);
+    login(user_name: string, password: string) {
+      console.log('user_name, password ', user_name, password);
   
-      this.loginService.login(username, password).subscribe(
+      this.loginService.login(user_name, password).subscribe(
         (success) => {
           this.router.navigate(['/neighbourhood']);
         },

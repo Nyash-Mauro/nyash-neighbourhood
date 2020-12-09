@@ -6,5 +6,4 @@ export interface Neighbourhood {
     definition:string,
     admin:number
 
-
 }
